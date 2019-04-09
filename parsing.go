@@ -11,6 +11,10 @@ import (
 	"unicode"
 )
 
+func ParseTokens(expression string, functions map[string]ExpressionFunction) ([]ExpressionToken, error) {
+	return parseTokens(expression, functions)
+}
+
 func parseTokens(expression string, functions map[string]ExpressionFunction) ([]ExpressionToken, error) {
 
 	var ret []ExpressionToken
